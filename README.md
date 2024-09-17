@@ -1,35 +1,53 @@
-# Traffic_signs
-Traffic signs classification using convolution neural networks CNN 
+# Traffic Signs Classification Using Convolutional Neural Networks (CNN)
+
+## Introduction
+
+Traffic sign recognition is a vital component of Advanced Driver Assistance Systems (ADAS) and autonomous driving technologies. Accurate detection and classification of traffic signs enable vehicles to make informed decisions, enhancing both safety and efficiency on the road. This project leverages deep learning techniques, specifically Convolutional Neural Networks (CNNs), to develop a model capable of recognizing and classifying various traffic signs from images.
+
+## Dataset
+
+- **Path:** `myData/`
+- **Labels File:** `labels.csv`
+- **Classes:** The dataset is organized into folders, each representing a specific traffic sign class. The `labels.csv` file contains the names of these classes.
+- **Image Dimensions:** 32x32 pixels with 3 color channels (RGB).
+
+### Dataset Split
+
+- **Training Set:** 60% of the data
+- **Validation Set:** 20% of the remaining data
+- **Test Set:** 20% of the total data
+
+## Model Architecture
+
+The CNN model for this project consists of the following layers:
+
+1. **Convolutional Layers:** Extract features from the input images using multiple convolutional layers. Each layer uses ReLU (Rectified Linear Unit) activation functions to introduce non-linearity and learn complex features.
+
+2. **Pooling Layers:** Reduce the spatial dimensions of the feature maps, helping the model to focus on the most important features and reducing the computational load.
+
+3. **Fully Connected Layers:** Combine the features extracted by the convolutional and pooling layers to classify the images into one of the traffic sign classes.
+
+4. **Output Layer:** Produces the final classification results by applying a softmax activation function to provide probabilities for each class.
+
+## Usage
+
+1. **Prepare the Dataset:**
+
+   Ensure that the dataset is properly organized into folders and the `labels.csv` file is in place.
+
+2. **Train the Model:**
+
+    Run the training script to start the training process. This will involve loading the dataset, building the CNN model, and training it using the training and validation sets.
+
+3. **Evaluate the Model:**
+
+    After training, use the test set to evaluate the model's performance and make predictions on unseen data.
 
 
-# Introduction
-Traffic sign recognition is a crucial aspect of Advanced Driver Assistance Systems (ADAS) and autonomous driving. By accurately detecting and classifying traffic signs, vehicles can make informed decisions, improving safety and efficiency on the road. This project utilizes deep learning techniques, particularly CNNs, to develop a model capable of recognizing various traffic signs from images.
+4. **Make Predictions:**
 
-# Dataset
-Path: myData/
-Labels File: labels.csv
-Classes: The dataset is organized into folders, each representing a specific traffic sign class. The labels file contains the names of these classes.
-Image Dimensions: 32x32 pixels with 3 color channels (RGB).
-The dataset is split into training, validation, and test sets:
+    Use the trained model to classify new traffic sign images.
 
-Training Set: 60% of the data
-Validation Set: 20% of the remaining data
-Test Set: 20% of the total data
-# Model Architecture
-The CNN model consists of the following layers:
 
-Convolutional Layers: Extracts features from the input images using multiple convolutional layers with ReLU activation.
-MaxPooling Layers: Reduces the spatial dimensions of the feature maps, preventing overfitting.
-Dropout Layers: Randomly drops units during training to prevent overfitting.
-Flatten Layer: Flattens the input into a single vector.
-Fully Connected Layers: Dense layers with ReLU activation, culminating in a softmax output layer that classifies the input image into one of the traffic sign categories.
-Training Process
-# Optimizer: Adam with a learning rate of 0.001.
-Loss Function: Categorical Crossentropy.
-Batch Size: 50 images per batch.
-Epochs: 10 epochs with 2000 steps per epoch.
-Image Augmentation: Applied to the training set to artificially expand the dataset by creating modified versions of images. This includes random width and height shifts, zooming, shearing, and rotations.
-The model is trained using the augmented dataset, and the performance is evaluated on the validation set.
 
-# Real-Time Traffic Sign Detection
-After training, the model is deployed in a real-time environment where it can recognize traffic signs from a live camera feed. The camera captures frames, which are then preprocessed and fed into the model. The model predicts the traffic sign class and displays the result on the video feed along with the probability of the prediction.
+
