@@ -50,4 +50,11 @@ The CNN model for this project consists of the following layers:
 
 
 
+[Screenshot 2024-09-03 101755](https://github.com/user-attachments/assets/fabcaaf5-9bee-4e78-b9a4-00ec1634b94c)
+
+![Screenshot 2024-09-03 102434](https://github.com/user-attachments/assets/f83eac96-a70b-48aa-b76f-300ad364ea61)
+![Screenshot 2024-09-03 102456](https://github.com/user-attachments/assets/5ea7a48f-8c22-49e3-93c5-dbc60e4bf3ae)
+
+![Screenshot 2024-09-02 153034](https://github.com/user-attachments/assets/9778094f-5a06-43f1-99cc-d4d1d68d5ce1)
+
 
